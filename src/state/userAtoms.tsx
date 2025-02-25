@@ -1,5 +1,9 @@
 import { atom } from "jotai";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type SetAtom<Args extends any[], Result> = (...args: Args) => Result
+
+
 interface EntryType {
   date: Date
   payee: string
@@ -17,19 +21,22 @@ interface AccountType {
 }
 
 interface UserType {
-  uid: string
-  firstName: string
-  lastName: string
-  email: string
-  accounts: AccountType[]
+  uid?: string
+  firstName?: string
+  lastName?: string
+  initials?: string
+  email?: string
+  accounts?: AccountType[]
 }
 
-const defaultUser: UserType = {
+export const defaultUser: UserType = {
   uid: '',
   firstName: '',
   lastName: '',
+  initials: '',
   email: '',
   accounts: [],
 }
 
-export const UserAtom = atom<UserType>(defaultUser)
+export const userAtom = atom<UserType>(defaultUser)
+userAtom.debugLabel = 'User State'
