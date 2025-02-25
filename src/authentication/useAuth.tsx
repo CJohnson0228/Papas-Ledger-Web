@@ -1,6 +1,6 @@
-import { isAuthAtom } from "@/state/AppAtoms";
-import { defaultUser, SetAtom, userAtom } from "@/state/userAtoms";
-import supabase from "@/utils/supabaseClient";
+import { isAuthAtom } from "@/app/state/AppAtoms";
+import { defaultUser, SetAtom, userAtom } from "@/authentication/state/userAtoms";
+import supabase from "@/config/supabaseClient";
 import { SetStateAction, useSetAtom } from "jotai";
 import { useState } from "react";
 

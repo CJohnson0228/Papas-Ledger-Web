@@ -5,14 +5,14 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import AppLayout from './app/AppLayout.tsx';
+import MainLayout from './app/MainLayout.tsx';
 import Dashboard from './app/pages/Dashboard.tsx';
 import Splash from './app/pages/Splash.tsx';
+import ProtectedRoute from './app/ProtectedRoutes.tsx';
 import AuthLayout from './authentication/AuthLayout.tsx';
 import Login from './authentication/pages/Login.tsx';
 import Register from './authentication/pages/Register.tsx';
 import './index.css';
-import MainLayout from './layouts/MainLayout.tsx';
-import ProtectedRoute from './layouts/ProtectedRoutes.tsx';
 
 gsap.registerPlugin(useGSAP);
 

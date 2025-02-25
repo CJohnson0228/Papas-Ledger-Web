@@ -1,6 +1,6 @@
 import { useAtomValue } from 'jotai';
 import { Navigate } from 'react-router';
-import { isAuthAtom } from '../state/AppAtoms';
+import { isAuthAtom } from './state/AppAtoms';
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const isAuth = useAtomValue(isAuthAtom)
