@@ -17,7 +17,7 @@ function Navbar() {
   const handleLogOut = async () => signOut()
 
   return (
-    <div id='Navbar' className='top-0 left-0 z-10 fixed bg-primary p-1 w-screen text-primary-foreground'>
+    <div id='Navbar' className='top-0 left-0 z-20 fixed bg-primary p-1 w-screen text-primary-foreground'>
       <div className="flex justify-between items-center mx-auto max-w-7xl h-[44px] container">
         <div className="flex items-center gap-3 font-heading text-xl">
           <img src="/favicon-32x32.png" alt="Aim High" />

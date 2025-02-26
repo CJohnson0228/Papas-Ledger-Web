@@ -1,10 +1,11 @@
 import { atom } from "jotai";
+import { focusAtom } from "jotai-optics";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type SetAtom<Args extends any[], Result> = (...args: Args) => Result
 
 
-interface EntryType {
+export interface EntryType {
   date: Date
   payee: string
   debit: boolean
@@ -13,14 +14,14 @@ interface EntryType {
   checkNumber?: number
 }
 
-interface AccountType {
+export interface AccountType {
   name: string
   openningDate: Date
-  openingBalance: number
+  openningBalance: number
   entries: EntryType[]
 }
 
-interface UserType {
+export interface UserType {
   uid?: string
   firstName?: string
   lastName?: string
@@ -40,3 +41,6 @@ export const defaultUser: UserType = {
 
 export const userAtom = atom<UserType>(defaultUser)
 userAtom.debugLabel = 'User State'
+
+export const accountsAtom = focusAtom(userAtom, (optic) => optic.prop('accounts'))
+accountsAtom.debugLabel = 'Accounts State'
