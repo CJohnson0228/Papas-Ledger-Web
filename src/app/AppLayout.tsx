@@ -5,7 +5,7 @@ import { Outlet } from "react-router"
 
 function AppLayout() {
   return (
-    <div id='App' className="overflow-hidden">
+    <div id='App' className="w-screen h-screen overflow-hidden">
       <Navbar />
       <Outlet />
       <Footbar />

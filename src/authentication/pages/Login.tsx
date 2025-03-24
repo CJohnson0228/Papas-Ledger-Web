@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form"
 import { useNavigate } from "react-router"
 import { z } from "zod"
 import { emailSchema, passwordSchema } from "../authSchema"
-import useAuth from "../useAuth"
+import useAuth from "../hooks/useAuth"
 
 const loginSchema = z.object({
   email: emailSchema,

@@ -1,6 +1,6 @@
 import { isAuthAtom } from "@/app/state/AppAtoms"
+import useAuth from "@/authentication/hooks/useAuth"
 import { userAtom } from "@/authentication/state/userAtoms"
-import useAuth from "@/authentication/useAuth"
 import { useAtomValue } from "jotai"
 import { IoCaretDownOutline } from "react-icons/io5"
 import { useNavigate } from "react-router"

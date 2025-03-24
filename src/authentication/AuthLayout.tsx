@@ -4,7 +4,7 @@ import supabase from "@/config/supabaseClient"
 import { useSetAtom } from "jotai"
 import { useEffect } from "react"
 import { Outlet, useNavigate } from "react-router"
-import useAuth from "./useAuth"
+import useAuth from "./hooks/useAuth"
 
 function AuthLayout() {
   const navigate = useNavigate()

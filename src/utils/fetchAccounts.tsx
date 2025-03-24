@@ -5,8 +5,7 @@ const fetchAccounts = async (userID: string) => {
   const { data, error } = await supabase
     .from('Accounts')
     .select('*')
-
-  console.log(userID)
+    .eq('userid', userID)
 
   if (error) {
     console.log(error)

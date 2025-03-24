@@ -6,19 +6,22 @@ export type SetAtom<Args extends any[], Result> = (...args: Args) => Result
 
 
 export interface EntryType {
+  _id: string,
+  reconciled: boolean
   date: Date
   payee: string
   debit: boolean
   amount: number
   category: string
-  checkNumber?: number
+  checkNumber?: string
 }
 
 export interface AccountType {
+  _id: string,
   name: string
   openningDate: Date
   openningBalance: number
-  entries: EntryType[]
+  entries?: EntryType[]
 }
 
 export interface UserType {
